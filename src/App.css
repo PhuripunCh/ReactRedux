@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 20px;
+  
+}
+
+.form-box {
+  width: 100%;      
+  max-width: 800px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px;    
+
+ 
+}
+
+body {
+  
+  background-image: linear-gradient(to right, #6eda78 , #ffa200);
+}
+
+.button-group button {
+  margin: 10px;
+  padding: 50px 60px;
+  border-radius: 10%;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* เตรียมตำแหน่งสำหรับการใช้งาน relative ในข้อความ */
+}
+
+.arrow-btn {
+  width: 170px;
+  height: 170px;
+  border: 2px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out; /* เพิ่มแอนิเมชันเมื่อ transform */
+}
+
+.arrow-btn:hover {
+  transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อเอาเมาส์มาชี้ */
+}
+
+.button-text {
+  position: absolute;
+  bottom: -15px; /* ตั้งค่าตำแหน่งให้อยู่ใต้ปุ่ม */
+  width: auto; /* กว้างเท่ากับปุ่ม */
+  text-align: center; /* จัดตำแหน่งข้อความให้อยู่ตรงกลาง */
+  color: #ffffff; /* สีของข้อความ */
+  font-size: 16px; /* ขนาดข้อความ */
+  padding: 0px 5px; /* เพิ่มพื้นที่รอบข้อความ */
+  background-color: #0084ff; /* พื้นหลังสีขาว */
+  border: 1px solid #0084ff; /* เส้นกรอบสีเทา */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาเบาๆ สำหรับข้อความ */
+  border-radius: 20px; /* มุมมน */
+  margin-top: 5px; /* ระยะห่างจากปุ่ม */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* แสดงเนื้อหาในแนวนอน และกระจายออกจากกัน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  padding: 20px; /* ปรับระยะห่างภายใน */
+}
+
+.language-select {
+  margin-left: auto; /* ผลักไปด้านขวา */
+}
+
+.h1-center {
+  flex-grow: 1; /* ให้ h1 ขยายเต็มพื้นที่ที่เหลือ */
+  margin-left: 75px;
+}
+
+.shapes-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape-btn {
+  width: 220px;
+  height: 220px;
+  border: 2px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out; /* เพิ่มแอนิเมชันเมื่อ transform */
+}
+
+.shape-btn:hover {
+  transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อเอาเมาส์มาชี้ */
+}
+
+.shape {
+  width: 100px;  /* กำหนดขนาดเพื่อให้แน่ใจว่าสามารถได้ 3 รูปในหนึ่งแถว */
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #666; /* สามารถปรับเปลี่ยนตามต้องการ */
+}
+.square2 {
+  background-color: rgb(255, 255, 255);
+}
+
+.square {
+  background-color: blue;
+}
+
+.rectangle {
+  background-color: red;
+  width: 150px;
+}
+
+.parallelogram {
+  background-color: green;
+  width: 150px;
+  transform: skew(20deg);
+}
+
+.trapezoid {
+  width: 100px; /* กำหนดความกว้างของฐานล่าง */
+  height: 0;
+  border-bottom: 100px solid purple; /* กำหนดความสูงและสีของรูปทรง */
+  border-left: 50px solid transparent; /* กำหนดความกว้างของเหลี่ยมซ้าย */
+  border-right: 50px solid transparent; /* กำหนดความกว้างของเหลี่ยมขวา */
+  border-top: none; /* ไม่มีเส้นขอบด้านบน */
+}
+
+
+.circle {
+  background-color: orange;
+  border-radius: 50%;
+}
+
+.ellipse {
+  background-color: pink;
+  border-radius: 50%;
+  width: 150px;
+}
+.clickable-shape {
+  cursor: pointer;  /* แสดง cursor ในรูปแบบที่บ่งบอกว่าคลิกได้ */
+  transition: transform 0.3s ease; /* ให้การแปลงมีความราบรื่น */
+}
+
+.clickable-shape:hover {
+  transform: scale(1.1); /* เพิ่มขนาดเล็กน้อยเมื่อ hover */
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 40px solid rgb(102, 99, 99); /* สีของสามเหลี่ยม */
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid rgb(102, 99, 99);
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid rgb(102, 99, 99);
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid rgb(102, 99, 99);
+}
+
+.homeContainer {
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   /* เพิ่มพื้นหลังสีขาวให้กับตัวคอนเทนเนอร์ */
+}
+
+.buttonContainer { /* สไตล์สำหรับคอนเทนเนอร์ของปุ่ม */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homeButton {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover {
+  background-color: #a6a7a8;
+}
+
